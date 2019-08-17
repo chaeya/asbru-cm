@@ -1,4 +1,4 @@
-# Ásbrú Connection Manager
+# SSH Connection Manager
 
 [![Travis][travis-badge]][travis-url]
 [![License][license-badge]][license-url]
@@ -11,7 +11,9 @@
 
 ## A free and open-source connection manager
 
-**Ásbrú Connection Manager** is a user interface that helps organizing remote terminal sessions and automating repetitive tasks.
+- 멀티 SSH 세션을 관리하는 프로그램
+- ssh client 로 잘 알려진  PAC (Perl Auto Connector) Manager 를 포크하여 개작한 프로그램
+- 하모니카 리눅스에서 사용할 수 있도록 재 패키징
 
 ### Features
 
@@ -36,39 +38,16 @@
 - Tray icon for 'right button' quick launching of managed connections. Screenshots and statistics.
 - DEB, RPM and .TAR.GZ packages available
 
-### Installation
+### 하모니카 에서 설치
 
-We recommend installing Ásbrú Connection Manager using our latest pre-built packages hosted on [packagecould.io](https://packagecloud.io/).
-
-To do so, execute the following commands:
-
-- Debian / Ubuntu
+- HamoniKR
 
   ````
-  $ curl -s https://packagecloud.io/install/repositories/asbru-cm/asbru-cm/script.deb.sh | sudo bash
+  $ wget https://packagecloud.io/install/repositories/asbru-cm/asbru-cm/script.deb.sh
+  $ chmod +x script.deb.sh
+  $ sudo os=ubuntu dist=bionic ./script.deb.sh 
   $ sudo apt-get install asbru-cm
   ````
-
-- Fedora
-
-  ````
-  $ curl -s https://packagecloud.io/install/repositories/asbru-cm/asbru-cm/script.rpm.sh | sudo bash
-  $ sudo dnf install asbru-cm
-  ````
-
-- Arch / Manjaro
-
-  ````
-  yaourt -S asbru-cm-git
-  ````
-
-Once installed on your system, type ````/opt/asbru/asbru```` in your terminal.
-
-### Frequenty Asked Questions
-
-- Why did you call that project "Ásbrú" ?
-
-  In Norse mythology, [Ásbrú](https://en.wikipedia.org/wiki/Bifr%C3%B6st) refers to a burning rainbow bridge that connects Midgard (Earth) and Asgard, the realm of the gods.
 
 - Is this a fork of PAC (Perl Auto Connector) Manager ?
 
@@ -87,20 +66,3 @@ Before contributing, please review our [contributing doc](https://github.com/asb
 ### License
 
 Ásbrú Connection Manager is licensed under the GNU General Public License version 3 <http://www.gnu.org/licenses/gpl-3.0.html>.  A full copy of the license can be found in the [LICENSE](https://github.com/asbru-cm/asbru-cm/blob/master/LICENSE) file.
-
-### Packages
-
-The repositories for our RPM and DEB builds are thankfully sponsored by [packagecloud](https://packagecloud.io/). A great thanks to them.
-
-<a title="Private Maven, RPM, DEB, PyPi and RubyGem Repository" href="https://packagecloud.io/"><img height="46" width="158" alt="Private Maven, RPM, DEB, PyPi and RubyGem Repository" src="https://packagecloud.io/images/packagecloud-badge.png" /></a>
-
-[travis-badge]: https://travis-ci.org/asbru-cm/asbru-cm.svg?branch=master
-[travis-url]: https://travis-ci.org/asbru-cm/asbru-cm
-[license-badge]: https://img.shields.io/badge/License-GPL--3-blue.svg?style=flat
-[license-url]: LICENSE
-[deb-badge]: https://img.shields.io/badge/Packages-Debian-blue.svg?style=flat
-[deb-url]: https://packagecloud.io/asbru-cm/asbru-cm?filter=debs
-[rpm-badge]: https://img.shields.io/badge/Packages-RPM-blue.svg?style=flat
-[rpm-url]: https://packagecloud.io/asbru-cm/asbru-cm?filter=rpms
-[liberapay-badge]: http://img.shields.io/liberapay/patrons/asbru-cm.svg?logo=liberapay
-[liberapay-url]: https://liberapay.com/asbru-cm/donate
